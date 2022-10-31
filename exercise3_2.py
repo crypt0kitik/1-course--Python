@@ -1,6 +1,8 @@
+#ask data from user
 temperature = input("Give the outside temperature: \n")
 temperature = int(temperature)
 
+# compare t
 if 0 <= temperature <= 10:
     print("COLD")
 
