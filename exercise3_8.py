@@ -1,4 +1,8 @@
-# iputs here, ask the order cost €
+# TASK: ask info about status, sales codes and VIP points from user
+# count price for parcel or letter
+# print results
+
+# inputs here, ask the order cost €
 # is the user a student
 # is the user a VIP
 # ask for the sales code
@@ -34,7 +38,7 @@ if vip == "y":
     reduction = total_points / 1000
     reduction = round(reduction, 0)
     reduction = reduction * 5
-    total_cost = cost - reduction
+    total_cost = total_cost - reduction
 
 # if total cost < 99
     # add shipment costs 7.95€

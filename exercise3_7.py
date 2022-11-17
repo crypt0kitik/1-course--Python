@@ -1,3 +1,6 @@
+#TASK: Create an application that functions
+# as a shipment cost / postage calculator
+
 # import math module to round weight
 import math
 
@@ -21,28 +24,33 @@ if item == "l" and 200 < weight < 500:
     weight = weight / 100
     weight = math.floor(weight)
     cost = (weight * 4) + 50
-    print(f"Your shipment cost for letter is {cost} cents.")
+    cost = cost / 100
+    print(f"Your shipment cost for letter is {cost} euro.")
 elif item == "l" and weight > 500:
     mailbox = input("Does your letter fit the mailbox? y/n: \n")
     if mailbox == "y":
         weight = weight / 100
         weight = math.floor(weight)
         cost = (weight * 7) + 50
-        print(f"Your shipment cost for letter is {cost} cents.")
+        cost = cost / 100
+        print(f"Your shipment cost for letter is {cost} euro.")
     else: # if letter is more than 500g, add an extra 2 € to the price
         weight = weight / 100
         weight = math.floor(weight)
         cost = (weight * 7) + 50 + 200
-        print(f"Your shipment cost for letter is {cost} cents.")
+        cost = cost / 100
+        print(f"Your shipment cost for letter is {cost} euro.")
 
 # extra weight parcel - 200-500g is 8 cent per 100g, more 500g is 14 cent per 100g
 if item == "p" and 200 < weight < 500:
     weight = weight / 100
     weight = math.floor(weight)
     cost = (weight * 8) + 200
-    print(f"Your shipment cost for parcel is {cost} cents.")
+    cost = cost / 100
+    print(f"Your shipment cost for parcel is {cost} euro.")
 elif item == "p" and weight > 500:
     weight = weight / 100
     weight = math.floor(weight)
     cost = (weight * 14) + 200
-    print(f"Your shipment cost for parcel is {cost} cents.")
+    cost = cost / 100
+    print(f"Your shipment cost for parcel is {cost} euro.")
